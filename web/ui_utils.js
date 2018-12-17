@@ -394,11 +394,6 @@ function getParameterByName(name, url) {
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
-function getWatermarkText() {
-  var defaultWatermark = 'REFERENCE ONLY';
-  return getParameterByName('watermark') || defaultWatermark;
-}
-
 function getDocumentTitle() {
   var defaultTitle = 'PDF Viewer';
   return getParameterByName('documentTitle') || defaultTitle;
@@ -626,7 +621,6 @@ export {
   EventBus,
   ProgressBar,
   getDocumentTitle,
-  getWatermarkText,
   getPDFFileNameFromURL,
   noContextMenuHandler,
   parseQueryString,
